@@ -17,7 +17,7 @@
 | DATAS  | TITULOS DAS AULAS | TEMPO P/AULA |
 | ------------- | ------------- | ------------- |
 | 29/01  | Aula 01: Projeto Aplicativo de Audiobook | 2:41:17 |
-| 30/01  | Aula 02: Projeto Página do Apple Watch | ... |
+| 30/01  | Aula 02: Projeto Página do Apple Watch | 3:14:21 |
 | 31/01  | Aula 03: Projeto Cardápio Digital | ... |
 | 01/02  | Aula 04: Projeto Chat em Tempo Real | ... |
 
