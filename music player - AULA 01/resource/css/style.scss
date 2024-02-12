@@ -1,0 +1,179 @@
+@import 'imports/functions',
+'imports/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    @include reset();
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    @include align(column, center, center, 2rem);
+    position: relative;
+    background: $green;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    #image-container {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+
+        .img:nth-child(1) {
+            position: absolute;
+            top: 4rem;
+            right: 35rem;
+            z-index: -1;
+            opacity: .3;
+            width: 3rem;
+            rotate: 20deg;
+            animation: slide 2s infinite alternate ease-in-out;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .img:nth-child(2) {
+            position: absolute;
+            top: 4rem;
+            left: 35rem;
+            z-index: -1;
+            opacity: .3;
+            width: 3rem;
+            rotate: -10deg;
+            animation: slide 1.5s infinite alternate ease-in-out;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#box {
+    @include align(column, start, center, 2rem);
+    background-color: $white-10;
+    position: relative;
+    width: 24rem;
+    height: 25rem;
+    border-radius: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    box-shadow: $shadow-60;
+    
+    .box-image {
+        width: 90%;
+        border-radius: 1rem;
+        box-shadow: $shadow-60;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        bottom: 2rem;
+        color: $dark-20;
+        font-size: 3.3rem;
+        font-weight: 700;
+    }
+}
+
+#control {
+    @include align(row, center, center, 2rem);
+    background-color: $white-10;
+    height: 7rem;
+    width: 24rem;
+    border-radius: 2rem;
+    box-shadow: $shadow-60;
+
+    .button:nth-child(1) {
+        background-color: transparent;
+        color: $dark-10;
+        border: none;
+        outline: none;
+        height: 4rem;
+        width: 4.5rem;
+        border-radius: 1rem 0 0 1rem;
+        cursor: pointer;
+
+        i {
+            font-size: 1.8rem;
+        }
+    }
+
+    .button:nth-child(2) {
+        background-color: transparent;
+        color: $dark-10;
+        border: none;
+        outline: none;
+        height: 4rem;
+        width: 5rem;
+        cursor: pointer;
+
+        i {
+            font-size: 1.8rem;
+        }
+    }
+
+    .button:nth-child(3) {
+        background-color: transparent;
+        color: $dark-10;
+        border: none;
+        outline: none;
+        height: 4rem;
+        width: 4.5rem;
+        border-radius: 0 1rem 1rem 0;
+        cursor: pointer;
+
+        i {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1.5rem);
+    }
+}
+
+@media ( max-width: 429px) {
+    body {
+        #image-container {
+            .img:nth-child(1) {
+                top: 89%;
+                right: 2rem;
+                width: 3rem;
+            }
+
+            .img:nth-child(2) {
+                top: 5%;
+                left: 2rem;
+                width: 4rem;
+            }
+        }
+    }
+
+    #box {
+        width: 85%;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    #control {
+        @include align(row, center, center, 1.5rem);
+        width: 85%;
+    }
+}

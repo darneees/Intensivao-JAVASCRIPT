@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Player de audio">
+        <title>Music Player</title>
+        <!-- import css -->
+        <link rel="stylesheet" href="resource/css/style.css">
+        <!-- import icon -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <!-- import animation -->
+        <link rel="stylesheet" href="https://unpkg.com/transition-style">
+        <!-- import js -->
+        <script src="resource/js/script.js" defer></script>
+    </head>
+    <body>
+
+        <main id="box">
+            <picture class="box-image">
+                <img src="resource/img/nature/1.webp" alt="illustrative image" title="nature" id="change-image">
+            </picture>
+
+            <audio id="sound-nature"
+                src="resource/audios/1.mp3" loop></audio>
+
+            <h1 id="sound-name">Ocean</h1>
+        </main>
+
+        <footer id="control">
+            <button class="button">
+                <i class="ph-bold ph-skip-back" id="prev"></i>
+            </button>
+
+            <button class="button">
+                <i class="ph-bold ph-play" id="play-pause"></i>
+            </button>
+
+            <button class="button">
+                <i class="ph-bold ph-skip-forward" id="next"></i>
+            </button>
+        </footer>
+
+        <section id="image-container">
+
+            <picture class="img">
+                <img src="resource/img/song-01.png" alt="people listen a song">
+            </picture>
+
+            <picture class="img">
+                <img src="resource/img/song-02.png" alt="people listen a song">
+            </picture>
+        </section>
+
+    </body>
+</html>
